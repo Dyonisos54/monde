@@ -10,6 +10,9 @@
 	$NbPopulation = getPopulationTot($pdo);
 	$Nbcountry = getNbcountry($pdo);
 	$Nbmonarchy = getMonarchie($pdo);
+	$NbMonarchieAsia = getMonarchieAsia($pdo);
+	$NbMonarchieAfrica = getMonarchieAfrica($pdo);
+	$nbMonarchieOceania = getMonarchieOceania($pdo);
 
 
 ?>
@@ -28,6 +31,7 @@
 		<main>
 
 			<section>
+			<div>
 				<h1>Monde</h1>
 				<ul>
 					<li>Population totale : <?php echo $NbPopulation[0]; ?></li>
@@ -35,8 +39,18 @@
 					<li>Nombre de pays : <?php echo $Nbcountry[0];?></li>
 					<li>Nombre de continents : <?php echo $NbContinent[0]; ?></li>
 					<li>Nombre de monarchies : <?php echo $Nbmonarchy[0][0]; ?></li>
-				</ul>	
+				</ul>
+				</div>
+				<div>
+					<h1>Monarchie non constitutionnel</h1>
+					<ul>
+						<li>Asia : <?php echo $NbMonarchieAsia[0]; ?></li>
+						<li>Africa : <?php echo $NbMonarchieAfrica[0];?></li>
+						<li>Oceania : <?php echo $nbMonarchieOceania[0];?></li>
+					</ul>
+				</div>	
 			</section>
+			<section>
 
 			<section>
 

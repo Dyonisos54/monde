@@ -37,4 +37,28 @@ function getMonarchie($pdo){
 	return $stmt->fetch();
 }
 
+function getMonarchieAsia($pdo){
+	$sql = "SELECT COUNT(*) FROM country WHERE Continent = 'Asia' AND GovernmentForm LIKE :id";
+	$stmt = $pdo->prepare($sql);
+	$stmt -> bindValue(':id','monarchy');
+	$stmt->execute();
+	return $stmt->fetch();
+}
+
+function getMonarchieAfrica($pdo){
+	$sql = "SELECT COUNT(*) FROM country WHERE Continent = 'Africa' AND GovernmentForm LIKE :id";
+	$stmt = $pdo->prepare($sql);
+	$stmt -> bindValue(':id','monarchy');
+	$stmt->execute();
+	return $stmt->fetch();
+}
+
+function getMonarchieOceania($pdo){
+	$sql = "SELECT COUNT(*) FROM country WHERE Continent = 'Oceania' AND GovernmentForm LIKE :id";
+	$stmt = $pdo->prepare($sql);
+	$stmt -> bindValue(':id','monarchy');
+	$stmt->execute();
+	return $stmt->fetch();
+}
+
 ?>
