@@ -1,6 +1,6 @@
 <?php
 	$dsn = 'mysql:host=localhost;dbname=world;charset=utf8';
-	$pdo = new PDO($dsn, 'root', '');
+	$pdo = new PDO($dsn, 'root', 'azertypoiu');
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	require "fonction.php";
@@ -42,7 +42,7 @@
 				</ul>
 				</div>
 				<div>
-					<h1>Monarchie non constitutionnel</h1>
+					<h1>Monarchie non constitutionnelle</h1>
 					<ul>
 						<li>Asia : <?php echo $NbMonarchieAsia[0]; ?></li>
 						<li>Africa : <?php echo $NbMonarchieAfrica[0];?></li>

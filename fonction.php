@@ -34,8 +34,9 @@ function getMonarchie($pdo){
 	$stmt = $pdo->prepare($sql);
 	$stmt -> bindValue(':id',"%".'monarchy'."%");
 	$stmt->execute();
-	return $stmt->fetch();
+	return $stmt->fetchAll();
 }
+
 
 function getMonarchieAsia($pdo){
 	$sql = "SELECT COUNT(*) FROM country WHERE Continent = 'Asia' AND GovernmentForm LIKE :id";
