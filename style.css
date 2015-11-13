@@ -1,0 +1,23 @@
+
+/*-------- rétablie le flus -----------*/
+.clearfix{
+	clear: both;
+}
+
+/*-------- Article gauche --------------------------------*/
+
+.gauche{
+	float: left;
+}
+
+/*---------- SELECT continent ------------------------------*/
+select{
+	width: 250px;
+	height: 20px;
+}
+
+
+/*--------- ASIDE continent -------------------------------*/
+p{
+	margin: 0px;
+}
