@@ -4,14 +4,14 @@ function getNbCities($pdo){
 		$sql = 'SELECT COUNT(Name) FROM city';
 		$stmt = $pdo->prepare($sql);
 		$stmt->execute();
-		return $stmt->fetch(PDO::FETCH_ASSOC);
+		return $stmt->fetch();
 }
 //population totale
 function getPopulationTot($pdo){
 	$sql = 'SELECT SUM(Population) FROM country';
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute();
-	return $stmt->fetch(PDO::FETCH_ASSOC);
+	return $stmt->fetch();
 }
 //nombre de continent
 function getnbContinent($pdo){
@@ -25,7 +25,7 @@ function getNbcountry($pdo){
 	$sql = 'SELECT COUNT(Name) FROM country';
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute();
-	return $stmt->fetch(PDO::FETCH_ASSOC);
+	return $stmt->fetch();
 }
 
 //nombre de monarchie SELECT * FROM country WHERE GovernmentForm LIKE '%monarchy%' 
@@ -34,7 +34,7 @@ function getMonarchie($pdo){
 	$stmt = $pdo->prepare($sql);
 	$stmt -> bindValue(':id',"%".'monarchy'."%");
 	$stmt->execute();
-	return $stmt->fetchAll(PDO::FETCH_ASSOC);
+	return $stmt->fetch();
 }
 
 ?>
